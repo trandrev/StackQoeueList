@@ -45,4 +45,12 @@ public:
 				return list->get(index);
 		}
 	}
+	template <class T>
+		friend std::istream& operator >> (std::istream& is, ListQueue<T>& lt)
+	{
+		T var;
+		is >> var;
+		lt.add(var);
+		return is;
+	}
 };
