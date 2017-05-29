@@ -5,29 +5,37 @@
 
 void main()
 {
-	ListStack<int> lt;
-	//ListQueue<int> lt;
-
-	lt.add(15);
-	lt.add(25);
-	lt.add(35);
-	lt.add(45);
-	lt.add(75);
-
-	for (size_t i = 0; i < lt.size(); i++)
-		std::cout << lt[i] << "|";
-	std::cout << std::endl;
+	ListQueue<int> test1;
+	ListStack<int> test2;
+	
+	for(int i = 0; i < 5; i++)
+	{
+		std::cin >> test1;
+	}
+	
 	try
 	{
-		for (;;)
-		std::cout<<	lt.get()<<"|";
-	}catch(int ee)
+		for(;;)
+			std::cout << test1.get() << "|";
+	}
+	catch (int ee)
+	{
+		std::cout << std::endl << "queue is empty";
+	}
+	
+	for(int i = 0; i < 5; i++)
+	{
+		std::cin >> test2;
+	}
+	
+	try
+	{
+		for(;;)
+			std::cout << test2.get() << "|";
+	}
+	catch (int ee)
 	{
 		std::cout << std::endl << "stack is empty";
 	}
-
-
-	std::cin.get();
-
 
 }
